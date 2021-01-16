@@ -3,3 +3,11 @@
     font-weight: bold;
     color: #0077B6;
 }
+#name {
+    border-radius: 2px;
+    margin-bottom: 5px;
+}
+#button {
+    border-radius: 2px;
+    color: #0077B6;
+}
