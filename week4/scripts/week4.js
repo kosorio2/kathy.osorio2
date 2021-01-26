@@ -26,3 +26,58 @@ form.city.options[form.city.selectedIndex].text;
 selected = form.city.options[2].text;
 
 console.log(selected); //This shows which value was selected
+
+
+//Object Orinted Programming 
+
+//JavaScript uses a prototypal inheritance model.
+//This means that very class has a prototype property that is shared by every instance of the class
+
+class Turtle {
+    constructor(name) {
+        this.name = name;
+        this.weapon = 'hands';
+    }
+    sayHi() {
+        return `Hi dude, my name ${this.name}`;
+    }
+    attack() {
+        return `Feel the power of my ${this.weapon}`;
+    }
+}
+
+const leo = new Turtle('Leonardo');
+
+console.log(leo.name); 
+console.log(leo.sayHi());
+
+Turtle.prototype; //The prototype property returns as an object
+
+Turtle.prototype.weapon = 'Hands';
+
+Turtle.prototype.attack = function() {
+    return `Feel the power of my ${this.weapon}!`;
+}
+
+const raph = new Turtle('Raphael');
+
+console.log(raph.name);
+console.log(raph.sayHi());
+console.log(raph.attack());
+
+console.log(raph.constructor.prototype);
+
+
+//Creating private properties 
+class Tortuga {
+    constructor(name, color) {
+        this.name = name; 
+        let _color = color; 
+        this.setColor = color => { return _color = color; }
+        this.getColor = () => _color;
+    }
+}
+
+raph = new Tortuga('Raphael', 'Red');
+
+console.log(raph.getColor());
