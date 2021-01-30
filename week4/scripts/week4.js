@@ -78,6 +78,47 @@ class Tortuga {
     }
 }
 
-raph = new Tortuga('Raphael', 'Red');
+// raph = new Tortuga('Raphael', 'Red');
 
-console.log(raph.getColor());
+// console.log(raph.getColor());
+
+
+// Object base inheritance example
+
+// const Human = {
+//     arms: 2,
+//     legs: 2,
+//     walk() { console.log('Walking'); }
+// }
+
+// const Superhuman = Object.create(Human);
+// Superhuman.change = function() {
+// return `${this.realName} goes into a phone box and comes out as ${this.name}!`;
+// }; 
+
+// const superman = Object.create(Superhuman);
+
+// Superhuman.init = function(name,realName){
+//     this.name = name;
+//     this.realName = realName;
+//     this.init = undefined; // this line removes the init function, so it can only be called once
+//     return this;
+// }
+
+// superman.name = 'Superman';
+// superman.realName = 'Clark Kent';
+
+// const batman = Object.create(Superhuman);
+// batman.init('Batman','Bruce Wayne');
+
+// const aquaman = Object.create(Superhuman).init('Aquaman', 'Arthur Curry');
+
+// superman.friend = [batman, aquaman]
+
+// superman.findFriends = function() {
+//     this.friends.forEach((friend) => {
+//         console.log(`${friend.name} is friends with ${this.name}`);
+//     }
+//     );
+// }
+// document.querySelectorAll('.thatExample').innerHTML = superman.findFriends(); 
