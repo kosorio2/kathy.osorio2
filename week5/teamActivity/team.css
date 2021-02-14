@@ -22,9 +22,6 @@ li {
     gap: 15px;
     margin-right: 20px;
 }
-/* li:nth-child(odd) {
-    grid-column: 2;
-} */
 div {
   line-height: 20px;
 }

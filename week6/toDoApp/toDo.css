@@ -1,0 +1,73 @@
+
+form {
+    background-color: white;
+    padding: 15px;
+    width: 50%;
+    border-radius: 5px;
+    display: flex;
+}
+
+html {
+    height: 100vh;
+    min-width: 600px;
+    background-image: linear-gradient(130deg, #FFFFFF, #1C3F80);
+    background-size: auto;
+}
+
+
+/* body {
+    border-style: solid;
+    display: flexbox;
+    justify-content: center;
+    padding: 50px;
+} */
+input[type="text"] {
+    height: 35px;
+    outline: 0;
+    border: none;
+    font-size: 1rem;
+}
+
+label {
+    display: inline-block;
+    margin: 5px;
+    min-width: 100px;
+    display: inline-block;
+    justify-content: right;
+}
+
+
+ul {
+    list-style: none;
+}
+
+
+/* class selectors */
+.completed {
+    text-decoration: line-through;
+    
+}
+.contain {
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+}
+.header {
+    flex-direction: column;
+    padding-left: 20%;
+    align-items: center;
+    font-weight: bold;
+    font-size: 25px;
+}
+.main {
+    padding: 20px;    
+}
+
+
+/* Id Selectors */
+#save {
+    padding-left: 10px;
+    padding-right: 8px;
+}
