@@ -27,9 +27,9 @@ footer {
 
 form {
     background-color: white;
-    padding: 15px;
-    width: 50%;
+    width: 90%;
     border-radius: 5px;
+    border-style: solid;
     display: flex;
 }
 
@@ -49,9 +49,10 @@ form {
 } */
 input[type="text"] {
     height: 35px;
+    max-width: 750px;
     outline: 0;
     border: none;
-    font-size: 1rem;
+    font-size: 15px;
 }
 
 label {
@@ -69,6 +70,10 @@ ul {
 
 
 /* class selectors */
+.addToDo {
+    margin: 5px;
+    max-width: 750px;
+}
 .completed {
     text-decoration: line-through;
     
@@ -94,6 +99,7 @@ ul {
 
 /* Id Selectors */
 #save {
+    margin: 10px;
     padding-left: 10px;
     padding-right: 8px;
 }
