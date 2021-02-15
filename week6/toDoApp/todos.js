@@ -24,7 +24,7 @@ function setList() {
                   <input type="checkbox" value="${todo.Id}" ${ todo.Completed ? "checked" : ""}>
                   ${todo.Content}
                   </label>
-                  <input type="button" id="${todo.Id}" value="X"></button>
+                  <input type="button" class='delete' id="${todo.Id}" value="X"></button>
                 </li>`; //The todo item is being assigned the ID from the ToDo class
             }
         );
@@ -72,3 +72,8 @@ button.addEventListener('click', (event) => {
 
 
 });
+
+const deleted = document.querySelector('.delete');
+deleted.addEventListener('change', () => {
+    deleted.remove();
+})
