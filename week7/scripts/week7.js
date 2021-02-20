@@ -149,3 +149,33 @@ englishGreeter();
 
 const frenchGreeter = greeter('Bonjour');
 frenchGreeter();
+
+
+//Pure functions - Similar to inheritance in Python?
+function cuandro(x){
+    return x*x;
+}
+
+function hypotenuse(a,b) {
+    return Math.sqrt(cuandro(a) + cuandro(b));
+}
+
+let answer = hypotenuse(3,4);
+document.querySelector('.note2').innerHTML = (`The hypotenuse of this right angle triangle is ${answer}`); 
+
+
+function sum(array, callback) {
+    if(callback) {
+        array = array.map(callback);
+    }
+    return array.reduce((a,b) => a + b);
+}
+
+let addition = sum([1, 2, 3]);
+document.querySelector('.note3').innerHTML = `The sum of the array [1, 2, 3] = ${addition}`;
+
+function mean(array) {
+    return sum(array)/array.length;
+}
+let theMean = mean([1, 2, 3]);
+document.querySelector('.note4').innerHTML = `The mean of the array [1, 2, 3] = ${theMean}`
