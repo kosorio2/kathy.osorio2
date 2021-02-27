@@ -1,13 +1,18 @@
 /* Week 8 Examples:  */
 /* Scale transform example */
 h2 {
-    transform: skew(15deg, 4deg);
+    transition-property: transform, color; 
+    transition-duration: 0.2s, 0.1s;  
+    transition-timing-function: ease-out, linear;
+    transition-delay: 50ms;
+
 }
 
 .ad-ad2 h1:hover span {
     color: #484848;
     transform: rotate(10deg) translateX(40px) scale(1.5);
 }
+
 
 h1:hover span {
     color: #484848;
@@ -26,4 +31,12 @@ h1:hover span {
 }
 #demo2 {
     border: solid 2px black;
+}
+
+#canvas2 {
+    border: dotted 2px black;
+}
+
+#canvas3 {
+    border: dotted 2px black;
 }

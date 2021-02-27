@@ -1,23 +1,8 @@
-// Chapter 8 Examples
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Chapter 8 - Just talked about transitions. 
 // Chapter 12 Examples 
 
 let canvas = document.getElementById("myCanvas");
+let canvas2 = document.getElementById("canvas2");
 
 let context = canvas.getContext("2d"); //The object that’s returned by getContext is an instance of CanvasRenderingContext2D
 
@@ -45,3 +30,31 @@ function drawPattern() {
 
     };
 }
+
+// This function is painting a circle and then displaying it to the canvas 
+
+function drawCircle(canvas) {
+    let context = canvas2.getContext("2d");
+    context.beginPath();
+    context.arc(50, 50, 30, 0, Math.PI*2, true);
+    context.closePath();
+    context.strokeStyle = "red";
+    context.fillStyle = "blue";
+    context.lineWidth = 3;
+    context.fill(); 
+    context.stroke();
+}
+
+drawCircle()
+
+window.addEventListener("load", drawImageToCanvas, false);
+
+function drawImageToCanvas() {
+    let canvas3 = document.getElementById("canvas3");
+    let context = canvas3.getContext("2d");
+    let image = document.getElementById("myImageElem");
+    context.drawImage(image, 0, 0); 
+
+};
+
+drawImageToCanvas()

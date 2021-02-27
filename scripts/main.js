@@ -26,9 +26,14 @@ const links = [
         url: "week6/toDoApp/toDo.html"
     },
     {
-        label: "week 7",
+        label: "Week 7 Notes",
         url: "week7/index.html"
+    },
+    {
+        label: "Week 8 Notes",
+        url: "week8/index.html"
     }
+
 ];
 
 links.forEach (
