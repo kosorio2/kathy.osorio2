@@ -40,3 +40,81 @@ console.log(popup)  //How does this work?
 // }
 // const id = requestAnimationFrame(rotate);
 
+const btn = document.getElementById('rainbow');
+const rainbow = ['red','orange','yellow','green','blue','rebeccapurple','violet'];
+function change() {      
+    document.body.style.background = rainbow[Math.floor(7*
+    Math.random())];
+}
+btn.addEventListener('click', change);
+
+const form = document.forms[0];
+form.addEventListener('submit', factorize, false);
+
+function factorize(event) {
+    event.preventDefault();
+
+    const number = Number(form.number.value);
+    document.getElementsById('ouput').innerText = factorOf(number);
+
+}
+
+function factorsOf(n) {
+    if(Number.isNaN(Number(n))) {
+        throw new RangeError('Argument Error: Value must be an integer');
+    }
+    if (n < 0) {
+        throw new RangeError('Argument Error: Number must be positive');
+
+    }
+    if (!Number.isInteger(n)) {
+        throw new RangeError('Argument Error: Number must be an integer');
+    }
+    const factors = [];
+    for (let i=1 , max = Math.sqrt(n); i <= max ; i++) {
+        if (n%i === 0){
+            factors.push(i, n/i)
+        }
+    }
+    return factors.sort((a, b) => a - b);
+}
+
+
+// Example for creating a mini chat
+
+const URL = 'wss://echo.websocket.org/'; //It uses wss as a secure protocol
+const outputDiv = document.getElementById('output');
+const forme = document.forms[0];
+const connection = new WebSocket(URL);
+
+connection.addEventListener('open', () => {
+    output('CONNECTED');
+}, false)
+
+//In this case, we call a function called output() with the 
+//string 'CONNECTED' provided as an argument. The output() 
+//is used to output messages to the screen.
+
+function output(message) {
+    const para = document.createElement('p');
+    para.innerHTML = message;
+    outputDiv.appendChild(para);
+
+}
+forme.addEventListener('submit', message, false);
+
+
+function message(event) {
+    event.preventDefault();
+    const text = form.message.value;
+    output(`SENT: ${text}`);
+    connection.send(text);
+}
+
+connection.addEventListener('message', (event) => {
+    output(`RESPONSE: ${event.data}`);
+}, false)
+
+connection.addEventListener('close', () => {
+    output('DISCONNECTED');
+}, false);
