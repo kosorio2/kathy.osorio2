@@ -73,7 +73,18 @@ button.addEventListener('click', (event) => {
 
 });
 
-const deleted = document.querySelector('.delete');
-deleted.addEventListener('change', () => {
-    deleted.remove();
-})
+// function deleteTodo(todo) {
+//     ToDo.map((item, index) => {
+//         if (item.id == ToDo.id) {
+//             ToDo.splice(index, 1);
+//         }
+//     })
+//     window.localStorage.setItem('Todo', JSON.stringify)
+//     document.body.innerHTML = "";
+// }
+
+
+
+// const deleted = document.querySelector('.delete');
+// deleted.addEventListener('change', () => {
+//     deleted.remove();

@@ -1,4 +1,9 @@
-let ol = document.querySelector('ol');
+function toggleMenu() {
+    console.log(document.getElementById("dropDown").classList);
+    document.getElementById("dropDown").classList.toggle("hide");  
+}
+
+let ul = document.querySelector('ul');
 
 const links = [ 
     {
@@ -50,7 +55,7 @@ const links = [
 
 links.forEach (
     link => {
-        ol.innerHTML += 
+        ul.innerHTML += 
         `
          <li><a href="${link.url}">${link.label}</a></li>
         `

@@ -1,3 +1,4 @@
+
 //Read input and put it in a div
 function readInput() {
     const input = document.querySelector('#input').value;
@@ -75,3 +76,4 @@ document.getElementById('add1').addEventListener('click', clickFunction);
 document.getElementById('sub1').addEventListener('click', clickFunction);
 document.getElementById('mul1').addEventListener('click', clickFunction);
 document.getElementById('fra1').addEventListener('click', clickFunction);
+

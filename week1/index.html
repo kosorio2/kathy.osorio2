@@ -14,10 +14,17 @@
         }
     </style>
 </head>
+
 <body>
     <header>
-        <ol></ol>
+        <div class="wrapper">
+            <nav class="navigation">
+                <button onclick="toggleMenu()">&#9776;Menu</button>
+                <ul id="dropDown" class="hide"></ul>
+            </nav>
+        </div>
     </header>
+    
         <h1>Story Editor</h1>
         Story Name:<input id=name_input></input>
         <section>
@@ -30,5 +37,6 @@
         <section id="story_display"></section>
 
         <script src="../scripts/notes.js"></script>
+        <script src="scripts/main.js"></script>
 </body>
 </html>
