@@ -49,7 +49,12 @@ const links = [
     {
         label: "Week 11 Notes",
         url: "../week11/index.html"
+    },
+    {
+        label: "Final Project",
+        url: "../finalProject/WDDfinalProject/index.html"
     }
+
 ];
 
 links.forEach (
